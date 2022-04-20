@@ -1,6 +1,6 @@
 <template>
   <div class="loginContainer">
-    <div class="loginTitle">{{ $t("h.system") }}</div>
+    <div class="loginTitle">{{ $t("system") }}</div>
     <div class="loginForm">
       <el-form
         :model="ruleForm"
@@ -13,7 +13,7 @@
           <el-input
             v-model="ruleForm.username"
             size="small"
-            :placeholder="$t('h.accounts')"
+            :placeholder="$t('accounts')"
           ></el-input>
         </el-form-item>
         <el-form-item prop="password">
@@ -21,14 +21,14 @@
             v-model="ruleForm.password"
             type="password"
             size="small"
-            :placeholder="$t('h.password')"
+            :placeholder="$t('password')"
           >
           </el-input>
         </el-form-item>
         <el-form-item prop="mobileCode">
           <div class="captcha-wrap el-form-item">
             <el-input
-              :placeholder="$t('h.code')"
+              :placeholder="$t('code')"
               size="small"
               maxlength="6"
               v-model="ruleForm.codeNumber"
@@ -46,11 +46,11 @@
         </el-form-item>
         <div class="login-btn">
           <el-button type="primary" @click="submitForm('ruleForm')">{{
-            $t("h.login")
+            $t("login")
           }}</el-button>
         </div>
         <p style="font-size: 12px; line-height: 30px; color: #999">
-          Tips:{{ $t("h.tips") }}
+          Tips:{{ $t("tips") }}
         </p>
       </el-form>
     </div>
@@ -68,19 +68,19 @@ export default {
       userInfo: null, //用户信息
       alertText: null, //提示的内容
       ruleForm: {
-        username: this.$t("h.administrator"), //账号
+        username: this.$t("administrator"), //账号
         password: "123456", //密码
         codeNumber: "wyrf", //验证码
       },
       rules: {
         username: [
-          { required: true, message: this.$t("h.placeUser"), trigger: "blur" },
+          { required: true, message: this.$t("placeUser"), trigger: "blur" },
         ],
         password: [
-          { required: true, message: this.$t("h.palcePass"), trigger: "blur" },
+          { required: true, message: this.$t("palcePass"), trigger: "blur" },
         ],
         codeNumber: [
-          { required: true, message: this.$t("h.palceCode"), trigger: "blur" },
+          { required: true, message: this.$t("palceCode"), trigger: "blur" },
         ],
       },
     };
