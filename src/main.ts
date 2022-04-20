@@ -3,6 +3,7 @@ import App from "./App.vue";
 import router from "./router/index";
 import store from "./store/index";
 import ElementPlus from "element-plus";
+import "element-plus/dist/index.css";
 import i18n from "./locales/index";
 
 const app = createApp(App);
