@@ -2,6 +2,7 @@ import { createApp } from "vue";
 import App from "./App.vue";
 import router from "./router/index";
 import store from "./store/index";
+import ElementPlus from "element-plus";
 
 const app = createApp(App);
 
@@ -13,6 +14,7 @@ app.config.globalProperties.$store = useStore();
 app.config.globalProperties.$router = useRoute();
 
 app.use(router);
-import { format } from "url";
+app.use(ElementPlus);
+
 app.use(store);
 app.mount("#app");
