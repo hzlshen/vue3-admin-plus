@@ -3,6 +3,7 @@ import App from "./App.vue";
 import router from "./router/index";
 import store from "./store/index";
 import ElementPlus from "element-plus";
+import i18n from "./locales/index";
 
 const app = createApp(App);
 
@@ -15,6 +16,7 @@ app.config.globalProperties.$router = useRoute();
 
 app.use(router);
 app.use(ElementPlus);
+app.use(i18n);
 
 app.use(store);
 app.mount("#app");
