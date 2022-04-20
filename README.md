@@ -1,16 +1,77 @@
-# Vue 3 + TypeScript + Vite
+#基于 vue-cli 构建的财务后台管理系统(`vue2`+`vuex`+`axios`+`vue-router`+`element-ui`+`echarts`+`websocket`+`vue-i18n`)
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+[![LICENSE](https://img.shields.io/badge/license-Anti%20996-blue.svg)](https://github.com/996icu/996.ICU/blob/master/LICENSE)[![996.icu](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu)
 
-## Recommended IDE Setup
+---
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
+### 本项目可以学到:
 
-## Type Support For `.vue` Imports in TS
+    1、学会使用vue-cli2.0构建项目.
+    2、基于(pomise)封装axios的get、post等http请求.
+    3、学会使用vue-router实现页面跳转带参.
+    4、学会使用vuex状态管理.
+    5、配套element-ui(主要对table的操作多)
+    6、对elementui进行二次封装组件,提高复用性
+    7、略微涉及echarts作图标分析
+    8、使用websocket监听ele进度条状态
+    9、使用vue-i18n实现国际化--中英文切换
+    10、使用Ngprogress做加载,类似github loading bar
 
-Since TypeScript cannot handle type information for `.vue` imports, they are shimmed to be a generic Vue component type by default. In most cases this is fine if you don't really care about component prop types outside of templates. However, if you wish to get actual prop types in `.vue` imports (for example to get props validation when using manual `h(...)` calls), you can enable Volar's Take Over mode by following these steps:
+#### 安装
 
-1. Run `Extensions: Show Built-in Extensions` from VS Code's command palette, look for `TypeScript and JavaScript Language Features`, then right click and select `Disable (Workspace)`. By default, Take Over mode will enable itself if the default TypeScript extension is disabled.
-2. Reload the VS Code window by running `Developer: Reload Window` from the command palette.
+#### 项目地址：
 
-You can learn more about Take Over mode [here](https://github.com/johnsoncodehk/volar/discussions/471).
+（`git clone`）
+
+```shell
+git clone https://github.com/hzlshen/vue-project.git
+```
+
+#### 通过`npm`安装本地服务第三方依赖模块(需要已安装[Node.js](https://nodejs.org/))
+
+```
+npm install
+```
+
+#### 启动服务(http://localhost:8080)
+
+```
+npm run dev
+```
+
+#### 发布代码
+
+```
+npm run build
+```
+
+#### 开发
+
+#### 目录结构
+
+<pre>
+.
+├── README.md           
+├── build              // 构建服务和webpack配置
+├── config             // 项目不同环境的配置
+├── dist               // 项目build目录
+├── index.html         // 项目入口文件
+├── package.json       // 项目配置文件
+├── src                // 生产目录
+│   ├── assets         // css js 和图片资源
+│   ├── axios          // ajax url 放置
+│   ├── components     // 各种组件
+│   ├── images         // 图片文件夹
+│   ├── i18n           // 国际化文件夹
+│   ├── page           // 各种页面
+│   ├── router         // 页面路由
+│   ├── store          // vuex状态管理器
+│   ├── style          // 样式文件
+│   └── main.js        // Webpack 预编译入口
+</pre>
+
+###项目截图
+<br/>
+![](https://github.com/hzlshen/Imgage_box/blob/master/vue-project1.png)
+
+![](https://github.com/hzlshen/Imgage_box/blob/master/vue-project2.png)
