@@ -4,7 +4,7 @@
     <div class="collapse-btn" @click="getCollapse">
       <i class="el-icon-menu"></i>
     </div>
-    <div class="logo">{{ $t("h.system") }}</div>
+    <div class="logo">{{ $t("system") }}</div>
 
     <div class="company">
       <template>
