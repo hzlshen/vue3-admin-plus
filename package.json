@@ -18,6 +18,7 @@
     "js-cookie": "3.0.1",
     "jsencrypt": "3.2.1",
     "mockjs": "^1.1.0",
+    "moment": "^2.29.3",
     "nprogress": "0.2.0",
     "vite-plugin-mock": "^2.9.6",
     "vue": "3.2.31",

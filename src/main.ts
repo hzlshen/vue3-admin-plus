@@ -5,6 +5,7 @@ import store from "./store/index";
 import ElementPlus from "element-plus";
 import "element-plus/dist/index.css";
 import i18n from "./locales/index";
+import moment from "moment";
 
 const app = createApp(App);
 
@@ -18,6 +19,7 @@ app.config.globalProperties.$router = useRoute();
 app.use(router);
 app.use(ElementPlus);
 app.use(i18n);
+app.use(moment);
 
 app.use(store);
 app.mount("#app");
