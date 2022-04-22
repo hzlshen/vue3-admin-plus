@@ -21,8 +21,7 @@
               :index="list.index"
               v-for="list in item.subNav"
               :key="list.index"
-              >{{ list.title }}</el-menu-item
-            >
+            >{{ list.title }}</el-menu-item>
           </el-menu-item-group>
         </el-submenu>
         <el-menu-item :index="item.index" :key="item.index" v-else>
@@ -48,7 +47,7 @@ export default {
         {
           icon: "el-icon-setting",
           index: "chart",
-          title: this.$t("h.account"),
+          title: this.$t("account")
         },
         /**
          * inquiry 原始单据
@@ -56,25 +55,25 @@ export default {
         {
           icon: "el-icon-tickets",
           index: "1",
-          title: this.$t("h.invoice"),
+          title: this.$t("invoice"),
           subNav: [
             {
               index: "/orderReceivable",
-              title: "应收单据",
+              title: "应收单据"
             },
             {
               index: "/transactionFlow",
-              title: "交易流水",
+              title: "交易流水"
             },
             {
               index: "/systemStatement",
-              title: "系统对账单",
+              title: "系统对账单"
             },
             {
               index: "/bankFlow",
-              title: "银行流水",
-            },
-          ],
+              title: "银行流水"
+            }
+          ]
         },
         /**
          * verifyPlatform 对账平台
@@ -82,57 +81,57 @@ export default {
         {
           icon: "el-icon-date",
           index: "2",
-          title: this.$t("h.reconciliation"),
+          title: this.$t("reconciliation"),
           subNav: [
             {
               index: "/verifyReceivables",
-              title: "收款对账",
+              title: "收款对账"
             },
             {
               index: "/verifyAutomate",
-              title: "自动对账",
+              title: "自动对账"
             },
             {
               index: "/verifyBankStatement",
-              title: "银行对账",
-            },
-          ],
+              title: "银行对账"
+            }
+          ]
         },
         /**
          * verifyRecord 对账记录
          * **/
         {
           icon: "el-icon-goods",
-          title: this.$t("h.record"),
+          title: this.$t("record"),
           index: "3",
           subNav: [
             {
               index: "/verifyReceivablesRecord",
-              title: "收款记录",
+              title: "收款记录"
             },
             {
               index: "/verifyBankStatementRecord",
-              title: "银行记录",
-            },
-          ],
+              title: "银行记录"
+            }
+          ]
         },
         /**
          * reportForms报表
          * **/
         {
           icon: "el-icon-star-off",
-          title: this.$t("h.report"),
+          title: this.$t("report"),
           index: "4",
           subNav: [
             {
               index: "/OrderSummary",
-              title: "订单执行总表",
+              title: "订单执行总表"
             },
             {
               index: "/ReceivablesBalance",
-              title: "收款对账余额表",
-            },
-          ],
+              title: "收款对账余额表"
+            }
+          ]
         },
         {
           icon: "el-icon-more",
@@ -141,23 +140,23 @@ export default {
           subNav: [
             {
               index: "/Structure",
-              title: "平台管理",
+              title: "平台管理"
             },
             {
               index: "/UpdatePWD",
-              title: "修改密码",
-            },
-          ],
-        },
-      ],
+              title: "修改密码"
+            }
+          ]
+        }
+      ]
     };
   },
   computed: {
     ...mapState({
-      collapse: (state) => state.collapse,
-    }),
+      collapse: state => state.collapse
+    })
   },
-  methods: {},
+  methods: {}
 };
 </script>
 <style scoped></style>
