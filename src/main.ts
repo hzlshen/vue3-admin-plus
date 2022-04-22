@@ -13,6 +13,23 @@ const app = createApp(App);
 import { useStore } from "vuex";
 import { useRoute } from "vue-router";
 
+// 输入框组件
+import hzlInput from "@/components/template/hzlInput.vue";
+// 下拉框组件
+import hzlSelect from "@/components/template/hzlSelect.vue";
+// 分页
+import hzlPage from "@/components/template/hzlPage.vue";
+// 表格组件
+import hzlTable from "@/components/template/hzlTable.vue";
+// 弹窗
+import hzlDialog from "@/components/template/hzlDialog.vue";
+
+app.component("hzl-input", hzlInput);
+app.component("hzl-select", hzlSelect);
+app.component("hzl-page", hzlPage);
+app.component("hzl-table", hzlTable);
+app.component("hzl-dialog", hzlDialog);
+
 app.config.globalProperties.$store = useStore();
 app.config.globalProperties.$router = useRoute();
 
