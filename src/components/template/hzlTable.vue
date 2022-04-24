@@ -24,25 +24,25 @@
 </template>
 <script setup>
 // import moment from "moment";
-import { defineProps } from "vue";
+// import { defineProps } from "vue";
 
 const props = defineProps({
   DataList: {
     type: Array,
     default() {
       return [];
-    },
+    }
   },
   cols: {
     type: Array,
     default() {
       return [];
-    },
+    }
   },
   height: {
     type: [Array, Number],
-    default: "410",
-  },
+    default: "410"
+  }
 });
 
 const handleSelectedRow = () => {};
