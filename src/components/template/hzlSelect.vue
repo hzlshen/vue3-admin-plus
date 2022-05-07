@@ -31,7 +31,7 @@ const props = defineProps({
   }
 });
 const hanleChange = () => {
-  emit("input", this.select);
+  emit("input", dataMap.select);
 };
 const dataMap = reactive({
   select: ""
