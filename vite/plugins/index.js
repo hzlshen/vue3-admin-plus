@@ -7,7 +7,7 @@ import createSetupExtend from './setup-extend'
 import {
     viteMockServe
 } from 'vite-plugin-mock'
-import chunkSplitPlugin from 'vite-plugin-chunk-split';
+import {chunkSplitPlugin} from 'vite-plugin-chunk-split';
 
 
 export default function createVitePlugins(viteEnv, isBuild = false) {
