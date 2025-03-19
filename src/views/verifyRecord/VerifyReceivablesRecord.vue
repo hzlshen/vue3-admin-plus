@@ -173,7 +173,7 @@
 <script>
   import {mapState} from 'vuex'
   import moment from 'moment'
-  import {getOrderReceivable,getCompany} from '../../axios/api'
+  // import {getOrderReceivable,getCompany} from '../../axios/api'
   import search from '../../components/search/Search'
   export default {
     name: 'bill',

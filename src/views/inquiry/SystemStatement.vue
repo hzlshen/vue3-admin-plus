@@ -162,7 +162,7 @@
 
 <script>
   import {mapState} from 'vuex'
-  import {getOrderReceivable,getCompany} from '../../axios/api'
+  // import {getOrderReceivable,getCompany} from '../../axios/api'
   import search from '../../components/search/Search'
   import batchAudit from '../../components/filterBox/batchAudit'
   import batchUnAudit from '../../components/filterBox/batchUnAudit'

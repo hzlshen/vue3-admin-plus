@@ -226,7 +226,7 @@
 </template>
 
 <script>
-  import {getOrderReceivable} from '../../axios/api'
+  // import {getOrderReceivable} from '../../axios/api'
   import moment from 'moment'
 
   import batchStatement from '../../components/filterBox/batchStatement'

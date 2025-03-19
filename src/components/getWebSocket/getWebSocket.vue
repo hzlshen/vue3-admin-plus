@@ -16,7 +16,7 @@
 
 <script>
   import {mapState} from 'vuex'
-  import api from '../../axios/url.js'
+  // import api from '../../axios/url.js'
   export default {
     name: 'getWebSocket',
     data () {

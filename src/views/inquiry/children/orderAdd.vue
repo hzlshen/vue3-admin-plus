@@ -1031,7 +1031,7 @@
 
 <script>
   import {mapState} from 'vuex'
-  import {getOrderReceivable} from '../../../axios/api'
+  // import {getOrderReceivable} from '../../../axios/api'
   export default {
     name: 'orderAdd',
     data () {

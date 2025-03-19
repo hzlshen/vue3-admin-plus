@@ -210,7 +210,7 @@
 </template>
 
 <script>
-  import {getOrderReceivable} from '../../axios/api'
+  // import {getOrderReceivable} from '../../axios/api'
   import batchStatement from '../../components/filterBox/batchStatement'
     export default {
         name: 'orderSummary',
