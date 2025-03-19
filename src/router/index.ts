@@ -1,3 +1,4 @@
+import { defineAsyncComponent } from "vue";
 import {
   createRouter,
   createWebHistory,
@@ -16,7 +17,8 @@ const routes: Array<RouteRecordRaw> = [
   },
   {
     path: "/home",
-    component: () => import("@/views/home/index.vue"),
+    // 使用defineAsyncComponent进行懒加载
+    component: defineAsyncComponent(() => import("@/views/home/index.vue")),
     meta: {
       title: "自述文件",
     },
@@ -24,7 +26,7 @@ const routes: Array<RouteRecordRaw> = [
       {
         //我的账户
         path: "/chart",
-        component: () => import("@/views/chart/index.vue"),
+        component: defineAsyncComponent(() => import("@/views/chart/index.vue")),
         meta: {
           title: "我的账户",
         },
@@ -35,7 +37,7 @@ const routes: Array<RouteRecordRaw> = [
       {
         //订单应收
         path: "/orderReceivable",
-        component: () => import("@/views/inquiry/OrderReceivable.vue"),
+        component: defineAsyncComponent(() => import("@/views/inquiry/OrderReceivable.vue")),
         meta: {
           title: "应收单据",
         },
@@ -43,7 +45,7 @@ const routes: Array<RouteRecordRaw> = [
       {
         //交易流水
         path: "/transactionFlow",
-        component: () => import("@/views/inquiry/TransactionFlow.vue"),
+        component: defineAsyncComponent(() => import("@/views/inquiry/TransactionFlow.vue")) ,
         meta: {
           title: "交易流水",
         },
@@ -51,7 +53,7 @@ const routes: Array<RouteRecordRaw> = [
       {
         //系统对账单
         path: "/systemStatement",
-        component: () => import("@/views/inquiry/SystemStatement.vue"),
+        component: defineAsyncComponent(() => import("@/views/inquiry/SystemStatement.vue")),
         meta: {
           title: "系统对账单",
         },
@@ -59,14 +61,14 @@ const routes: Array<RouteRecordRaw> = [
       {
         //银行流水
         path: "/bankFlow",
-        component: () => import("@/views/inquiry/BankFlow.vue"),
+        component: defineAsyncComponent( () => import("@/views/inquiry/BankFlow.vue")),
         meta: {
           title: "银行流水",
         },
       },
       {
         path: "/orderDetail/:id",
-        component: () => import("@/views/inquiry/children/orderDetail.vue"),
+        component: defineAsyncComponent( () => import("@/views/inquiry/children/orderDetail.vue")),
         name: "orderDetail",
         meta: {
           title: "订单详情",
@@ -74,7 +76,7 @@ const routes: Array<RouteRecordRaw> = [
       },
       {
         path: "/orderAdd",
-        component: () => import("@/views/inquiry/children/orderAdd.vue"),
+        component: defineAsyncComponent( () => import("@/views/inquiry/children/orderAdd.vue")),
         meta: {
           title: "订单新增",
         },
@@ -84,7 +86,7 @@ const routes: Array<RouteRecordRaw> = [
        * **/
       {
         path: "/verifyAutomate",
-        component: () => import("@/views/verifyPlatform/verifyAutomate.vue"),
+        component: defineAsyncComponent(() => import("@/views/verifyPlatform/verifyAutomate.vue")),
         meta: {
           title: "自动对账",
         },
@@ -92,7 +94,7 @@ const routes: Array<RouteRecordRaw> = [
       {
         //对账平台
         path: "/verifyReceivables",
-        component: () => import("@/views/verifyPlatform/VerifyReceivables.vue"),
+        component: defineAsyncComponent(() => import("@/views/verifyPlatform/VerifyReceivables.vue")),
         meta: {
           title: "收款对账",
         },
@@ -100,8 +102,8 @@ const routes: Array<RouteRecordRaw> = [
       {
         //银行对账
         path: "/verifyBankStatement",
-        component: () =>
-          import("@/views/verifyPlatform/VerifyBankStatement.vue"),
+        component: defineAsyncComponent(() =>
+          import("@/views/verifyPlatform/VerifyBankStatement.vue")),
         meta: {
           title: "银行对账",
         },
@@ -113,8 +115,8 @@ const routes: Array<RouteRecordRaw> = [
       {
         //银行对账单记录
         path: "/verifyReceivablesRecord",
-        component: () =>
-          import("@/views/verifyRecord/VerifyReceivablesRecord.vue"),
+        component:defineAsyncComponent( () =>
+          import("@/views/verifyRecord/VerifyReceivablesRecord.vue")),
         meta: {
           title: "收款对账记录",
         },
@@ -122,8 +124,8 @@ const routes: Array<RouteRecordRaw> = [
       {
         //银行对账单记录
         path: "/verifyBankStatementRecord",
-        component: () =>
-          import("@/views/verifyRecord/VerifyBankStatementRecord.vue"),
+        component:defineAsyncComponent( () =>
+          import("@/views/verifyRecord/VerifyBankStatementRecord.vue")),
         meta: {
           title: "银行对账记录",
         },
@@ -134,7 +136,7 @@ const routes: Array<RouteRecordRaw> = [
       {
         //订单执行汇总表
         path: "/orderSummary",
-        component: () => import("@/views/reportForms/OrderSummary.vue"),
+        component: defineAsyncComponent(() => import("@/views/reportForms/OrderSummary.vue")),
         meta: {
           title: "订单执行汇总表",
         },
@@ -142,14 +144,14 @@ const routes: Array<RouteRecordRaw> = [
       {
         //收款对账余额表
         path: "/receivablesBalance",
-        component: () => import("@/views/reportForms/ReceivablesBalance.vue"),
+        component: defineAsyncComponent( () => import("@/views/reportForms/ReceivablesBalance.vue")),
         meta: {
           title: "收款对账余额表",
         },
       },
       {
         path: "/Upload",
-        component: () => import("@/views/upload/upload.vue"),
+        component:defineAsyncComponent( () => import("@/views/upload/upload.vue")),
         meta: {
           title: "文件上传",
         },
@@ -159,7 +161,7 @@ const routes: Array<RouteRecordRaw> = [
        * */
       {
         path: "/Structure",
-        component: () => import("@/views/set/structure.vue"),
+        component:defineAsyncComponent( () => import("@/views/set/structure.vue")),
         meta: {
           title: "组织架构",
         },
@@ -167,7 +169,7 @@ const routes: Array<RouteRecordRaw> = [
       //修改密码
       {
         path: "/UpdatePWD",
-        component: () => import("@/views/set/updatePWD.vue"),
+        component: defineAsyncComponent(() => import("@/views/set/updatePWD.vue")),
         meta: {
           title: "修改密码",
         },
